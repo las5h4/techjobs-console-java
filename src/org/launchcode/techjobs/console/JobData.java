@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Collections;
 
 /**
  * Created by LaunchCode
@@ -82,7 +83,9 @@ public class JobData {
                 jobs.add(row);
             }
         }
-
+        if (jobs.size() < 1){
+            System.out.println("No results found.");
+        }
         return jobs;
     }
 
@@ -140,6 +143,9 @@ public class JobData {
                     jobs.add(row);
                 }
             }
+        }
+        if (jobs.size() < 1){
+            System.out.println("No results found.");
         }
         return jobs;
     }
